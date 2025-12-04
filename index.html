@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srujan Pant | Technical Game Designer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">SRUJAN PANT</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="docs/Srujan_Resume.pdf" target="_blank" class="btn-resume">Resume</a>
+        </div>
+    </nav>
+
+    <header id="about" class="hero">
+        <h2>Hello, I'm Srujan.</h2>
+        <h1>Technical Game Designer</h1>
+        
+        <p>
+            I specialize in <span class="highlight">Unreal Engine 5, C++ and Systemic Design</span>.
+        </p>
+        <p>
+            With <b>3+ years of professional development experience</b>, I bridge the gap between creative design and technical implementation. My background involves shipping indie titles, architecting UI systems for shooters and prototyping complex gameplay mechanics.
+        </p>
+        <p>
+            Currently Technical Game Designer at <span class="highlight">Wrought Studio</span>.
+        </p>
+
+        <div class="tech-stack" style="font-size: 1rem; margin-top: 1rem;">
+            <span class="highlight">Core Stack:</span> Unreal Engine 5 (C++/BP) • Unity (C#) • Systems Architecture
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card" onclick="openModal('modal-ldl')">
+                <img src="images/LDLThumb.jpg" alt="Last Day Lockdown" class="card-img"> 
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Last Day Lockdown</span>
+                        <span class="card-role">Tech Design / Co-Founder</span>
+                    </div>
+                    <p class="card-desc">Narrative-driven escape game where office spaces are re-contextualized as intricate systemic challenges.</p>
+                    <div class="tech-stack">Design Docs • Unreal 5 • C++</div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal-pb')">
+                <img src="images/PBThumb.jpg" alt="Phantom Blaze" class="card-img"> 
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Phantom Blaze</span>
+                        <span class="card-role">Senior Programmer</span>
+                    </div>
+                    <p class="card-desc">Shipped Shooter. Responsible for UI Architecture and Lobby Systems.</p>
+                    <div class="tech-stack">Unreal • C++ • Networking</div>
+                </div>
+            </div>
+            
+            <div class="project-card" onclick="openModal('modal-azooma')">
+                <img src="images/AzoomaThub.jpg" alt="Azooma Escape" class="card-img">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Azooma Escape</span>
+                        <span class="card-role">Tech Sound Design</span>
+                    </div>
+                    <p class="card-desc">Shipped narrative top-down adventure game. Handled FMOD integration and Unity C# scripting.</p>
+                    <div class="tech-stack">Unity • C# • FMOD</div>
+                </div>
+            </div>
+
+            <div class="project-card" onclick="openModal('modal-zenith')">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Zenith Studio</span>
+                        <span class="card-role">Game Designer</span>
+                    </div>
+                    <p class="card-desc">Freelance design for multiple unannounced titles. Economy balancing and combat systems.</p>
+                    <div class="tech-stack">Design Docs • Excel • Balancing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-ldl" class="modal-overlay" onclick="closeModal(event, 'modal-ldl')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(null, 'modal-ldl')">&times;</span>
+            
+			<div class="modal-header">
+				<h2>Last Day Lockdown</h2>
+				<p style="color: var(--accent-color)">Technical Game Designer & Lead Programmer</p>
+				<div style="width:100%; margin-top:1rem; height: 190px;">
+					<iframe 
+						src="https://store.steampowered.com/widget/2646700/" 
+						frameborder="0" 
+						width="100%" 
+						height="190">
+					</iframe>
+				</div>
+			</div>
+
+            <div class="modal-body">
+                <div class="feature-block">
+					<div class="feature-text">
+						<h4>Technical Design</h4>
+						<h3>The Temporal Reveal System</h3>
+						<p><b>The Problem:</b> Unreal’s binary level streaming broke immersion; we needed the world to organically "form" around the player. However, streaming actors individually caused severe CPU overhead.</p>
+						<p>
+							<b>The Solution:</b> I decoupled the technical loading from the visual rendering to simulate a gradual load.
+							<ul> 
+								<li><b>Instant Backend Load:</b> The sub-level streams instantly with all meshes hidden. </li>
+								<li><b>The Reveal Controller:</b> I scripted an expanding Sphere Collider that toggles mesh visibility upon overlap. </li>
+								<li><b>Visual Synchronization:</b> This works in tandem with a timeline-driven Post-Process Mask. The mask expands perfectly alongside the collider. </li>
+							</ul>
+						</p>
+						<p><b>Result:</b> A smooth, narrative-compliant "world generation" effect that creates a seamless visual wave where the world appears to construct itself around the player.</p>
+					</div>
+
+					<div class="media-column">
+						<div class="feature-artifact"> 
+							<video autoplay loop muted playsinline poster="./images/SideComaprison.png">
+								<source src="./videos/TemporalReveal.mp4" type="video/mp4">
+								<img src="./images/SideComaprison.png" alt="Temporal Reveal Video">
+							</video>
+						</div>
+
+						<div class="feature-artifact">
+							<img src="./images/SideComaprison.png" alt="Wireframe Debug View">
+						</div>
+					</div>
+				</div>
+
+                <div class="feature-block">
+					<div class="feature-text">
+						<h4>Interaction Design</h4>
+						<h3>The Observation System</h3>
+						<p><b>The Problem:</b> To reduce "pixel hunting," we highlighted interactable objects. This backfired. Players began "Cursor Sweeping"; blindly scanning for outlines rather than observing the environment.</p>
+						<p>
+							<b>The Solution:</b> I shifted the loop from "Finding" to "Observing" by introducing two systems:
+							<ul>
+								<li><b>The Zoom Mechanic:</b> A dedicated optic system allowing players to scrutinize details (posters, text) from a distance.</li>
+								<li><b>Narrative Inspectables:</b> I introduced 'Contextual Clues,' turning large set pieces into narrative discovery points that are observed in-world rather than collected</li>
+							</ul>
+						</p>
+						<p><b>Result:</b> This stopped players from relying on UI outlines and retrained them to visually explore the level structure for environmental clues.</p>
+					</div>
+					
+					<div class="media-column">
+						<div class="feature-artifact">
+							<img src="./images/BeforeZoom.png" alt="Zoom Mechanic Showcase">
+						</div>
+						
+						<div class="feature-artifact">
+							<img src="./images/AfterZoom.png" alt="Zoom Mechanic Showcase">
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pb" class="modal-overlay" onclick="closeModal(event, 'modal-pb')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(null, 'modal-pb')">&times;</span>
+            <div class="modal-header">
+                <h2>Phantom Blaze</h2>
+                <p style="color: var(--accent-color)">Senior Game Programmer (Shipped)</p>
+				
+				<a href="https://play.google.com/store/apps/details?id=com.zonkstudio.phantomblaze" 
+				   target="_blank" 
+				   style="display: inline-block; margin-top: 1rem;">
+					<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
+						 alt="Get it on Google Play" 
+						 style="height: 80px;">
+				</a>
+				
+				<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                    <i>*Due to NDA restrictions, proprietary assets cannot be shown. Assets shown utilize proxy content to showcase an overview of work done.</i>
+                </p>
+            </div>
+			<div class="feature-block">
+					<div class="feature-text">
+						<h4>Backend Engineering</h4>
+						<h3>Custom REST API Integration</h3>
+						<p><b>The Challenge:</b> The game required persistent player progression (Loadouts, Stats, Match Scores). The client needed to synchronize complex data with a custom backend without blocking the game thread.</p>
+						<p>
+							<b>The Solution:</b> I engineered a C++ <b>HTTP Subsystem</b> to manage the full data lifecycle.
+							<ul>
+								<li><b>Async Communication:</b> Implemented asynchronous GET/POST requests to serialize and deserialize JSON data for Player Profiles and Match History.</li>
+								<li><b>Full-Stack Implementation:</b> I handled the entire pipeline; from parsing the raw API response to populating the Lobby, Loadout and End-of-Match UI.</li>
+							</ul>
+						</p>
+						<p><b>Result:</b> Achieved seamless data persistence, allowing players to customize loadouts and view real-time stats with zero UI freezing or hitching.</p>
+					</div>
+
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+    
+						<div class="diagram-cropper">
+							<a href="./images/PB_APIFlowchart.png" target="_blank" title="Click to view full diagram">
+								<img src="./images/PB_APIFlowchart.png" alt="API Architecture Flowchart">
+								
+								<div class="cropper-overlay">
+									<span>🔍 Click to View Full Diagram</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			
+            <div class="modal-body">
+                <div class="feature-block">
+                    <div class="feature-text">
+                        <h4>Systems Architecture</h4>
+                        <h3>Data-Driven UI Framework</h3>
+                        <p><b>The Challenge:</b> ard-coding visual properties into Blueprints meant that simple re-brands (changing themes or logos) required editing dozens of files, making iteration slow and error-prone.</p>
+						<p>
+							<b>The Solution:</b> I engineered a modular architecture using <b>C++ Base Classes</b> and <b>Data Assets</b> to separate Logic from Presentation.
+							<ul>
+								<li><b>Logic in C++:</b> Core functionality is handled in code, exposing only safe properties to the Editor.</li>
+								<li><b>Centralized Theming:</b> Visuals are driven by a Global Data Asset. Changing a logo or color in this one asset propagates to every widget instantly.</li>
+							</ul>
+						</p>
+						<p><b>Result:</b> This turned a complex re-skinning task into a "one-stop process," empowering designers to update the game's look without engineering support.</p>
+					</div>
+					
+					<div class="media-column">
+						<div class="feature-artifact">
+							<img src="./images/PB_UIAsset.png" alt="UI Asset Showcase">
+						</div>
+						<div class="feature-artifact">
+							<img src="./images/PB_PaletteData.png" alt="UI Data Showcase">
+						</div>
+					</div>
+                </div>
+				
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-azooma" class="modal-overlay" onclick="closeModal(event, 'modal-azooma')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(null, 'modal-azooma')">&times;</span>
+            <div class="modal-header">
+                <h2>Azooma Escape</h2>
+                <p style="color: var(--accent-color)">Technical Sound Designer (Shipped)</p>
+				<div style="width:100%; margin-top:1rem; height: 190px;">
+					<iframe 
+						src="https://store.steampowered.com/widget/2896760/" 
+						frameborder="0" 
+						width="100%" 
+						height="190">
+					</iframe>
+				</div>				
+				<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                    <i>*Due to NDA restrictions, proprietary assets cannot be shown. Assets shown utilize proxy content to showcase an overview of work done.</i>
+                </p>
+            </div>
+            <div class="modal-body">
+				<div class="feature-block full-width-block">
+					
+					<div class="feature-text">
+						<h4>Middleware Integration</h4>
+						<h3>Unity Audio to FMOD Integration</h3>
+						<p><b>The Problem:</b> The project initially relied on Unity’s native Audio system. As narrative complexity grew, this became a bottleneck. "Hard-referenced" clips meant the sound designer couldn't iterate without engineering help.</p>
+						<p>
+							<b>The Solution:</b> I spearheaded the complete migration to <b>FMOD Studio</b>, decoupling the audio engine from gameplay logic.
+							<ul>
+								<li><b>The Abstraction Layer:</b> I replaced direct AudioClip references with a custom <b>Audio Manager</b>. This bridge listens for gameplay events (e.g., <code>PlayerDetected</code>) and translates them into FMOD Event instances.</li>
+								<li><b>Dynamic Control:</b> I mapped gameplay variables to <b>FMOD Parameters</b>. This allowed us to drive effects, like applying a Lowpass Filter during pause menu, purely through code logic.</li>
+							</ul>
+						</p>
+						<p><b>Result:</b> Unlocked adaptive scoring capabilities and allowed the sound team to live-mix the game without needing new builds.</p>
+					</div>
+
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">						
+						<img src="./images/AzoomaImage.png" alt="Unity Inspector controlling FMOD Parameters">
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <div id="modal-zenith" class="modal-overlay" onclick="closeModal(event, 'modal-zenith')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal(null, 'modal-zenith')">&times;</span>
+            <div class="modal-header">
+                <h2>Zenith Studio</h2>
+                <p style="color: var(--accent-color)">Game Designer (Professional Contract)</p>
+                <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+                    <i>*Due to NDA restrictions, proprietary assets cannot be shown. Assets shown utilize proxy content to showcase an overview of work done.</i>
+                </p>
+            </div>
+            <div class="modal-body">
+				<div class="feature-block">
+					<div class="feature-text">
+						<h4>Production Strategy</h4>
+						<h3>Multi-Project Design Leadership</h3>
+						<p><b>The Challenge:</b> The studio had strong engineering throughput but lacked design leadership. Projects remained as high-potential technical prototypes without defined themes, mechanics or completion goals.</p>
+						<p>
+							<b>The Solution:</b> As the <b>Sole Designer</b>, I established the entire creative pipeline from scratch across multiple titles.
+							<ul>
+								<li><b>0-to-1 Definition:</b> Transformed raw prototypes into cohesive products by defining the moodboard, lore, combat loops, etc.</li>
+								<li><b>Adaptive Documentation:</b> Created bespoke documentation suites tailored to each project's scale, ranging from <b>meta-progression and economy layers</b> for Hybrid Casual games to <b>monetization and retention loops</b> for casual games.</li>
+							</ul>
+						</p>
+					</div>
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+						<div class="diagram-cropper">
+							<a href="./images/Zenith_GameFlow.png" target="_blank" title="Click to view full diagram">
+								<img src="./images/Zenith_GameFlow.png" alt="Game Flowchart">								
+								<div class="cropper-overlay">
+									<span>🔍 Click to View Full Diagram</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="feature-block">
+					<div class="feature-text">
+						<h4>Systems Design</h4>
+						<h3>Economy Normalization & Monetization</h3>
+						<p><b>The Challenge:</b> The game’s economy was unstructured with arbitrary weapon pricing, leading to erratic player progression and unclear value propositions in the store.</p>
+						<p>
+							<b>The Solution:</b> I restructured the economy into a quantifiable <b>Tiered Value System</b>.
+							<ul>
+								<li><b>Rarity Bands:</b> Categorized weapons into 4 distinct tiers (Normal to Gold) with strict price ranges based on power metrics (DPS/Utility).</li>
+								<li><b>Conversion Strategy:</b> Balanced the <b>Soft Currency</b> economy (Weapons/Upgrades) against <b>Hard Currency</b> sinks (IAP Chests & Consumables) to ensure a fair "Time-to-Unlock" ratio for F2P players.</li>
+							</ul>
+						</p>
+					</div>
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+						<div class="diagram-cropper">
+							<a href="https://docs.google.com/spreadsheets/d/1XRjUjmLrjr_XhYdrEwM0sga3I_2lEsxei-e1Qppy30Q/edit?usp=sharing" target="_blank" title="Click to view full spreadsheet">
+								<img src="./images/Zenith_Spreadsheet.png" alt="Game Spreadsheet">								
+								<div class="cropper-overlay">
+									<span>🔍 Click to View Full Spreadsheet</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Connect: srujanpant@gmail.com | <a href="https://www.linkedin.com/in/srujan-pant/" style="color:var(--accent-color)">LinkedIn</a></p>
+        <p>&copy; 2025 Srujan Pant</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
