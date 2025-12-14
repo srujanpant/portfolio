@@ -77,6 +77,7 @@
             </div>
 
             <div class="project-card" onclick="openModal('modal-zenith')">
+				<img src="images/ZenithThumb.png" alt="Zenith Studio" class="card-img">
                 <div class="card-content">
                     <div class="card-header">
                         <span class="card-title">Zenith Studio</span>
@@ -86,6 +87,33 @@
                     <div class="tech-stack">Design Docs • Excel • Balancing</div>
                 </div>
             </div>
+			
+			<div class="project-card" onclick="openModal('modal-utn')">
+				<img src="images/UTNThumb.png" alt="Under The Nose" class="card-img">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Under The Nose</span>
+                        <span class="card-role">Tech Designer</span>
+                    </div>
+                    <p class="card-desc"> Intel × Sogeti Game Jam finalist. Designed and implemented a non-lethal stealth experience focused on investigation and evidence validation.</p>
+					<div class="tech-stack">Gameplay Systems • Stealth AI • GDD</div>
+                </div>
+            </div>
+			
+			<div class="project-card" onclick="openModal('modal-mechanics-gym')">
+				<img src="images/MechanicsGymThumb.png" alt="Mechanics Gym" class="card-img">
+				<div class="card-content">
+					<div class="card-header">
+						<span class="card-title">Mechanics Gym</span>
+						<span class="card-role"> Gameplay Programmer</span>
+					</div>
+					<p class="card-desc">
+						Public GitHub repo demonstrating gameplay mechanics prototypes and modular system coding.
+					</p>
+					<div class="tech-stack">C# / Unreal • GitHub • Systems Code</div>
+				</div>
+			</div>
+
         </div>
     </section>
 
@@ -349,7 +377,126 @@
             </div>
         </div>
     </div>
+	
+	<div id="modal-utn" class="modal-overlay" onclick="closeModal(event, 'modal-utn')">
+		<div class="modal-content" onclick="event.stopPropagation()">
+			<span class="close-btn" onclick="closeModal(null, 'modal-utn')">&times;</span>
+
+			<div class="modal-header">
+				<h2>Under The Nose</h2>
+				<p style="color: var(--accent-color)">Technical Game Designer</p>
+
+				<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+					<i>Intel × Sogeti Game Jam • Finalist Entry (72-hour production)</i>
+				</p>
+			</div>
+
+			<div class="modal-body">
+				<div class="feature-block full-width-block">
+
+					<div class="feature-text">
+						<h4>Game Jam Finalist • Technical Design</h4>
+						<h3>Thematic Systems Design Under Extreme Constraints</h3>
+
+						<p>
+							<b>The Problem:</b> Designing a stealth experience that communicates vulnerability and investigative tension 
+							<b>without combat</b>, relying entirely on player observation, decision-making, and information integrity.
+						</p>
+
+						<p>
+							<b>The Solution:</b> I designed and implemented a core loop that reframed the “boss encounter” as a 
+							<b>logic and verification challenge</b> rather than a combat test.
+							<ul>
+								<li>
+									<b>Non-Lethal Stealth Core:</b> Zero-combat stealth focused on positioning, timing, and avoidance to reinforce player vulnerability.
+								</li>
+								<li>
+									<b>Evidence-Driven Scoring System:</b> A logic-based evaluation system where contradictory evidence actively penalizes success.
+								</li>
+							</ul>
+						</p>
+
+						<p>
+							<b>Result:</b> The project was recognized as a <b>finalist entry</b> for its cohesive theme-to-mechanics alignment, 
+							validating the design approach despite the rapid production timeline.
+						</p>
+					</div>
+
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+						<div class="diagram-cropper">
+							<a href="./docs/UTN_GDD.pdf" target="_blank" title="View Full Game Design Document">
+								<img src="./images/UTN_GDDCover.png" alt="Under The Nose GDD">
+								<div class="cropper-overlay">
+									<span>📄 View Full GDD</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
     
+	<div id="modal-mechanics-gym" class="modal-overlay" onclick="closeModal(event, 'modal-mechanics-gym')">
+		<div class="modal-content" onclick="event.stopPropagation()">
+			<span class="close-btn" onclick="closeModal(null, 'modal-mechanics-gym')">&times;</span>
+
+			<div class="modal-header">
+				<h2>Mechanics Gym</h2>
+				<p style="color: var(--accent-color)">Technical Designer / Programmer</p>
+
+				<p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
+					<i>Public GitHub repository for gameplay mechanics and technical design experiments.</i>
+				</p>
+			</div>
+
+			<div class="modal-body">
+				<div class="feature-block full-width-block">
+
+					<div class="feature-text">
+						<h4>Gameplay Programming</h4>
+						<h3>A Playground for Mechanics Prototyping</h3>
+
+						<p>
+							<b>Intent:</b> Mechanics Gym is a public repository created to demonstrate my <b>programming ability</b> 
+							as a Technical Designer through small, focused gameplay mechanics rather than large, polished projects.
+						</p>
+
+						<p>
+							<b>What’s Inside:</b>
+							<ul>
+								<li>
+									<b>Mechanics Prototypes:</b> Self-contained gameplay systems exploring movement, interaction and state-based logic.
+								</li>
+								<li>
+									<b>Design Patterns:</b> Code structured for readability, extensibility and iteration, reflecting real-world engine constraints.
+								</li>
+							</ul>
+						</p>
+
+						<p>
+							<b>Why It Matters:</b> This repository acts as a transparent view into how I approach gameplay logic, 
+							system breakdown and implementation; bridging design intent with executable code.
+						</p>
+					</div>
+
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+						<div class="diagram-cropper">
+							<a href="https://github.com/srujanpant/MechanicsGym" target="_blank" title="Open Mechanics Gym Repository">
+								<img src="./images/MechanicsGym.png" alt="Mechanics Gym GitHub Repository">
+								<div class="cropper-overlay">
+									<span>🔗 Open Repository</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
     <footer>
         <p>Connect: srujanpant@gmail.com | <a href="https://www.linkedin.com/in/srujan-pant/" style="color:var(--accent-color)">LinkedIn</a></p>
         <p>&copy; 2025 Srujan Pant</p>

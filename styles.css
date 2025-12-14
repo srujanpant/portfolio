@@ -61,7 +61,8 @@ nav {
 
 /* --- HERO SECTION --- */
 .hero {
-    height: 90vh;
+	min-height: 90vh; /* ensures hero still fills most of viewport */
+    padding-top: 6rem; /* space for navbar */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,7 +243,10 @@ code { background: #111; padding: 0.2rem 0.4rem; border-radius: 4px; color: #ff7
 footer { text-align: center; padding: 3rem; color: var(--text-secondary); font-size: 0.9rem; }
 
 @media (max-width: 768px) {
-    .hero { padding: 0 5%; }
+    .hero {
+        padding: 6rem 5% 0 5%; /* top padding to push content below navbar */
+        align-items: flex-start;
+    }
     .hero h1 { font-size: 2.5rem; }
     .feature-block { grid-template-columns: 1fr; }
 }
