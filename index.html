@@ -18,7 +18,7 @@
     </nav>
 
     <header id="about" class="hero">
-        <h2>Hello, I'm Srujan.</h2>
+        <h2>Hello, I'm <b>Srujan.</b></h2>
         <h1>Technical Game Designer</h1>
         
         <p>
@@ -110,7 +110,7 @@
 					<p class="card-desc">
 						Public GitHub repo demonstrating gameplay mechanics prototypes and modular system coding.
 					</p>
-					<div class="tech-stack">C# / Unreal • GitHub • Systems Code</div>
+					<div class="tech-stack">C++ / Unreal • GitHub • Systems Code</div>
 				</div>
 			</div>
 
@@ -167,26 +167,29 @@
 
                 <div class="feature-block">
 					<div class="feature-text">
-						<h4>Interaction Design</h4>
-						<h3>The Observation System</h3>
-						<p><b>The Problem:</b> To reduce "pixel hunting," we highlighted interactable objects. This backfired. Players began "Cursor Sweeping"; blindly scanning for outlines rather than observing the environment.</p>
+						<h4>Level Design</h4>
+						<h3>The Reception Desk</h3>
+						<p><b>The Problem:</b> Critical path progression relied on static exploration. This failed. Players ignored items in peripheral blind spots or prioritized high-contrast clutter resulting in a high failure rate and a "flat" gameplay experience.</p>
 						<p>
-							<b>The Solution:</b> I shifted the loop from "Finding" to "Observing" by introducing two systems:
+							<b>The Solution:</b> I shifted from static placement to Action-Based Guidance by restructuring the level logic:
 							<ul>
-								<li><b>The Zoom Mechanic:</b> A dedicated optic system allowing players to scrutinize details (posters, text) from a distance.</li>
-								<li><b>Narrative Inspectables:</b> I introduced 'Contextual Clues,' turning large set pieces into narrative discovery points that are observed in-world rather than collected</li>
+								<li><b>Visual Hierarchy:</b> Relocated the ID card to the primary focal point (Sofa) to capture entry attention.</li>
+								<li><b>Mechanical Integration:</b> Implemented a fan repair puzzle. The resulting wind flutters the Calendar pages, using motion as a diegetic trigger to guide the player.</li>
 							</ul>
 						</p>
-						<p><b>Result:</b> This stopped players from relying on UI outlines and retrained them to visually explore the level structure for environmental clues.</p>
+						<p><b>Result:</b> Interaction rates rose from 20% to 100%. The mechanical addition solved the visibility issue while addressing feedback that the level initially lacked depth.</p>
 					</div>
 					
-					<div class="media-column">
-						<div class="feature-artifact">
-							<img src="./images/BeforeZoom.png" alt="Zoom Mechanic Showcase">
-						</div>
-						
-						<div class="feature-artifact">
-							<img src="./images/AfterZoom.png" alt="Zoom Mechanic Showcase">
+					<div class="feature-artifact" style="flex-direction: column; gap: 0.5rem;">
+    
+						<div class="diagram-cropper">
+							<a href="./docs/Level Design Case Study.pdf" target="_blank" title="Click to view full document">
+								<img src="./images/LDL_LDCover.png" alt="LDL Level Design Doc">
+								
+								<div class="cropper-overlay">
+									<span>🔍 Click to View Full Document</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>

@@ -2,8 +2,8 @@
     --bg-color: #121212;
     --surface-color: #1e1e1e;
     --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
-    --accent-color: #64ffda;
+    --text-secondary: #e0e0e0;
+    --accent-color: #2596be;
     --accent-hover: #4adbc0;
     --border-radius: 8px;
 }
@@ -152,7 +152,7 @@ section { padding: 5rem 10%; }
 .card-title { font-size: 1.4rem; font-weight: bold; }
 .card-role { font-size: 0.9rem; color: var(--accent-color); font-family: monospace; }
 .card-desc { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1rem; }
-.tech-stack { display: flex; gap: 0.5rem; font-size: 0.8rem; font-family: monospace; color: #888; }
+.tech-stack { display: flex; gap: 0.5rem; font-size: 0.8rem; font-family: monospace; color: var(--text-secondary); }
 
 /* --- MODAL SYSTEM --- */
 .modal-overlay {
